@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Junction Experts</title>
+<meta name="description" content="Business planning, management consulting and strategic advisory."><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#0F2230">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#EDEFEA;--ink:#10202E;--mut:#52606C;--line:#C9CFCB;--card:#F6F7F3;--acc:#2F6F73;--deep:#0F2230;--on:#EDEFEA;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1822;--ink:#E6EAE6;--mut:#9AA8B2;--line:#25394A;--card:#12232F;--acc:#6FB5B8;--deep:#081119;--on:#E6EAE6}}
+:root[data-theme="dark"]{--bg:#0C1822;--ink:#E6EAE6;--mut:#9AA8B2;--line:#25394A;--card:#12232F;--acc:#6FB5B8;--deep:#081119;--on:#E6EAE6}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:500;line-height:1.14;margin:0;letter-spacing:-.015em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background:#0A1621;color:#E6EAE6;display:grid;place-items:center;text-align:center;transition:opacity .7s,visibility .7s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro svg{position:absolute;inset:0;width:100%;height:100%}
+#intro path{stroke:#6FB5B8;stroke-width:1;fill:none;opacity:.35;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.2s ease forwards}
+#intro path:nth-child(2n){animation-delay:.2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+#intro .nm{position:relative;font:400 clamp(28px,6vw,46px)/1 "Source Serif 4",serif;letter-spacing:.02em;opacity:0;animation:up .9s .5s ease forwards}
+#intro .tg{position:relative;margin-top:16px;font-size:12px;letter-spacing:.32em;color:#9AA8B2;opacity:0;animation:up .9s 1.1s ease forwards}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#skip{position:absolute;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:none;border:0;color:#9AA8B2;font:inherit;font-size:13px;cursor:pointer;z-index:2;padding:8px}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:linear-gradient(var(--bg) 60%,transparent)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:500 20px "Source Serif 4",serif;text-decoration:none;letter-spacing:-.01em}
+.links{display:flex;align-items:center;gap:26px;font-size:14px}
+.links a.l{text-decoration:none;color:var(--mut)}
+.links a.l:hover{color:var(--ink)}
+.cb{width:68px;height:68px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;text-align:center;font-size:11px;line-height:1.15;font-weight:600;text-decoration:none;margin-top:16px;box-shadow:0 0 0 6px var(--bg)}
+.cb:hover{filter:brightness(1.1)}
+@media(max-width:700px){.l{display:none}.cb{width:60px;height:60px;font-size:10px}}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;border:0;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(32px,4.8vw,58px);max-width:15ch}
+.hero p{max-width:48ch;color:var(--mut);font-size:clamp(16px,1.5vw,18px);margin:20px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;border:1px solid var(--ink);text-decoration:none;font-weight:500;font-size:15px;cursor:pointer;background:none;color:var(--ink);font-family:inherit}
+.btn.p{background:var(--ink);color:var(--bg)}
+.hero svg.bg{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:min(46vw,620px);max-width:none;opacity:.4;pointer-events:none;z-index:-1}
+
+
+
+
+/* intro section */
+.two{display:grid;gap:44px;grid-template-columns:1fr}
+@media(min-width:860px){.two{grid-template-columns:1fr 1fr;align-items:center}}
+h2{font-size:clamp(26px,3.4vw,40px)}
+.lead{color:var(--mut);max-width:48ch;margin-top:16px;font-size:17px}
+.hub{width:100%;max-width:460px;margin:0 auto;display:block}
+.hub .n{fill:var(--card);stroke:var(--line)}
+.hub text{fill:var(--ink);font:500 11.5px "Instrument Sans",sans-serif;text-anchor:middle}
+.hub .c{fill:var(--deep)}
+.hub .ct{fill:var(--on);font:400 17px "Source Serif 4",serif}
+.hub line{stroke:var(--acc);stroke-width:1}
+/* expertise */
+.acc{margin-top:44px;border-top:1px solid var(--ink)}
+.it{border-bottom:1px solid var(--line)}
+.it button{width:100%;display:flex;gap:18px;align-items:baseline;text-align:left;background:none;border:0;color:inherit;padding:22px 0;cursor:pointer;font:inherit}
+.it .no{font-size:14px;color:var(--acc);font-weight:600;min-width:28px}
+.it .t{font:500 clamp(19px,2.4vw,26px)/1.2 "Source Serif 4",serif;flex:1;letter-spacing:-.015em}
+.it .pl{width:22px;height:22px;position:relative;flex:none;align-self:center}
+.it .pl:before,.it .pl:after{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--ink);transition:transform .3s}
+.it .pl:after{transform:rotate(90deg)}
+.it.open .pl:after{transform:rotate(0)}
+.pn{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.it.open .pn{grid-template-rows:1fr}
+.pn>div{overflow:hidden}
+.pn p{margin:0 0 14px 46px;color:var(--mut);max-width:60ch}
+.pn ul{list-style:none;margin:0 0 28px 46px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.pn li{border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:999px;font-size:14px}
+/* approach */
+.steps{display:grid;gap:0;margin-top:44px;counter-reset:s}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.st{padding:22px 22px 26px 0;border-top:2px solid var(--ink);counter-increment:s}
+.st:before{content:counter(s);display:block;font:500 28px "Source Serif 4",serif;color:var(--acc);margin-bottom:10px}
+.st h3{font-size:20px;margin-bottom:8px}
+.st p{margin:0;color:var(--mut);font-size:15px}
+/* cta/footer */
+.cta{background:var(--deep);color:var(--on);border:0;text-align:left}
+.cta h2{max-width:20ch}
+.cta .btn{border-color:var(--on);color:var(--on)}
+.cta .btn.p{background:var(--on);color:var(--deep)}
+footer{padding:28px 0;font-size:13px;color:var(--mut)}
+/* contact page */
+#contact{display:none;min-height:100svh;padding:120px 0 60px;border:0}
+body.cp #contact{display:block}
+body.cp main{display:none}
+.cd{display:grid;gap:0;margin-top:40px;max-width:640px}
+.cd a,.cd div{display:flex;justify-content:space-between;gap:16px;padding:20px 0;border-top:1px solid var(--line);text-decoration:none}
+.cd span:first-child{color:var(--mut)}
+.wa{margin-top:34px;display:inline-flex;gap:10px}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition:none!important}html{scroll-behavior:auto}}
+
+.pn p{margin:0 0 20px 46px}
+.sv{margin:0 0 34px 46px;display:grid;gap:0 36px;grid-template-columns:1fr}
+@media(min-width:860px){.sv{grid-template-columns:1fr 1fr}}
+.sv div{padding:16px 0;border-top:1px solid var(--line)}
+.sv b{display:block;font-weight:600;font-size:16px;margin-bottom:4px}
+.sv span{color:var(--mut);font-size:15px;display:block;max-width:52ch}
+@media(max-width:700px){.pn p,.sv{margin-left:0}}
+
+
+
+
+.hero .hub .spin{transform-box:view-box;transform-origin:200px 200px;animation:rot 80s linear infinite}
+.hero .hub .nd{transform-box:fill-box;transform-origin:center;animation:rot 80s linear infinite reverse}
+@keyframes rot{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.hero .hub .spin,.hero .hub .nd{animation:none!important}}
+@media(max-width:860px){.hero svg.bg{right:auto;left:50%;transform:translate(-50%,-50%);width:min(104vw,560px);opacity:.22}}
+.hero .hub .spin{will-change:transform}
+.hero.off .hub .spin,.hero.off .hub .nd{animation-play-state:paused}
+body.lock{overflow:hidden}
+button,a{-webkit-tap-highlight-color:transparent}
+.it button:hover .t{color:var(--acc)}
+.it.open .t{color:var(--acc)}
+
+.hg{display:grid;gap:40px;align-items:center;grid-template-columns:1fr}
+.lgw{display:block;width:clamp(190px,22vw,250px);background:#000;border-radius:14px;overflow:hidden;line-height:0;margin:0 0 26px}
+.lgw img{display:block;width:100%;height:auto}
+:root[data-theme="dark"] .lgw{background:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .lgw{background:none}}
+@media(min-width:861px){.hg{grid-template-columns:1.2fr .8fr;gap:56px}
+.hero svg.bg{position:static;transform:none;width:100%;max-width:420px;margin:0 auto;opacity:.95;z-index:auto}}
+#intro .tg{font-size:11px;letter-spacing:.22em;max-width:34ch;margin-left:auto;margin-right:auto;line-height:1.6}
+#intro .lgw{background:none;width:clamp(200px,34vw,300px);margin:22px auto 0;position:relative;opacity:0;animation:up .8s .5s ease forwards}
+#intro .lgw img{display:block;width:100%;height:auto}
+</style>
+<style>
+.logo-mark{display:flex;align-items:center;width:170px;height:52px;overflow:hidden}.logo-mark img{width:100%;height:100%;object-fit:contain;object-position:left center;display:block}.logo-mark:hover{opacity:.9}
+#why{background:var(--card)}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:44px;border:1px solid var(--line)}.why-grid>div{background:var(--card);padding:28px}.why-grid b{color:var(--acc);font-size:13px}.why-grid h3{font-size:24px;margin:12px 0 6px}.why-grid p{color:var(--mut);margin:0}.answer-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.answer-flow .st{padding:28px 24px;border-right:1px solid var(--line)}.answer-flow .st:last-child{border-right:0}.answer-flow .st h3{margin:0 0 10px}.answer-flow .st p{color:var(--mut);margin:0}@media(max-width:800px){.why-grid,.answer-flow{grid-template-columns:1fr}.answer-flow .st{border-right:0;border-bottom:1px solid var(--line)}.answer-flow .st:last-child{border-bottom:0}.logo-mark{width:145px}}
+</style><style>.explore-below{margin-top:14px}.explore-below a{color:var(--mut);font-size:14px;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:3px}.explore-below a:hover{color:var(--ink)}</style>
+<link rel="preload" as="image" href="junction-experts-logo.png" fetchpriority="high">
+</head><body class="lock">
+<div id="intro"><svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice"><path d="M0 150H800M0 300H800M0 450H800"/><path d="M200 0V600M400 0V600M600 0V600"/><path d="M100 600L400 300L700 0"/></svg>
+<div><div class="nm" data-k="brand.tagline"></div><div class="lgw"><img src="junction-experts-logo.png" alt="Junction Experts logo" width="1200" height="876" decoding="async" fetchpriority="high"></div></div><button id="skip">Skip</button></div>
+<header><div class="wrap nav"><a class="logo logo-mark" href="#" data-home aria-label="Junction Experts"><img src="junction-experts-logo.png" alt="Junction Experts logo" width="1200" height="876" decoding="async" fetchpriority="high"></a>
+<nav class="links" aria-label="Main"><a class="l" href="#" data-home>Home</a><a class="l" href="#expertise" data-go>Expertise</a><a class="l" href="#approach" data-go>How We Work</a>
+<a class="cb" href="#contact" aria-label="Contact us" data-k="nav.contact"></a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap hg"><div class="hc"><h1 data-k="hero.title"></h1><p data-k="hero.text"></p>
+<div class="btns"><a class="btn p" href="#expertise" data-go data-k="hero.primary"></a><a class="btn wal" href="#" target="_blank" rel="noopener" data-k="hero.secondary"></a></div></div><svg class="bg hub" viewBox="0 0 400 400" aria-hidden="true"></svg></div></section>
+<section><div class="wrap"><h2 data-k="positioning.title" style="max-width:20ch"></h2><p class="lead" data-k="positioning.text"></p></div></section>
+<section id="expertise"><div class="wrap"><h2 data-k="expertise.title"></h2><p class="lead" data-k="expertise.text"></p><div class="acc" id="acc"></div></div></section>
+<section id="why"><div class="wrap"><h2 data-k="why.title"></h2><p class="lead" data-k="why.text"></p><div class="why-grid"><div><b>01</b><h3>Clarity gaps</h3><p>When signals, priorities and business realities become difficult to read as one clear picture.</p></div><div><b>02</b><h3>Strategic alignment</h3><p>When important decisions are being made, but the wider direction has yet to fully come together.</p></div><div><b>03</b><h3>Execution discipline</h3><p>When a sound strategy needs the right structures, processes and ownership to become measurable progress.</p></div></div></div></section><section id="approach"><div class="wrap"><h2 data-k="approach.title"></h2><div class="answer-flow" id="steps"></div></div></section>
+<section class="cta"><div class="wrap"><h2 data-k="cta.title"></h2>
+<div class="btns" style="margin-top:28px"><a class="btn p wal" href="#" target="_blank" rel="noopener" data-k="cta.whatsapp"></a><a class="btn" href="#contact" data-k="cta.contact"></a></div></div></section>
+<footer><div class="wrap" data-k="brand.footer"></div></footer>
+</main>
+<section id="contact"><div class="wrap"><a href="#" data-home style="font-size:14px;color:var(--mut)" data-k="contactPage.back"></a>
+<h2 style="margin-top:22px" data-k="contactPage.title"></h2><p class="lead" data-k="contactPage.text"></p>
+<a class="btn p wa wal" href="#" target="_blank" rel="noopener" data-k="contactPage.button"></a><div class="cd" id="cd"></div></div></section>
+<script>
+/* ===== SITE CONFIG: edit content here only ===== */
+var CONFIG={
+brand:{name:"Junction Experts",short:"Junction Experts",tagline:"BUSINESS PR AND PLANNING CONSULTANTS",footer:"\u00a9 Junction Experts. All rights reserved."},
+contact:{whatsapp:"0000000000",message:"Hello, I would like to discuss a business challenge.",email:"hello@example.com",phone:"+00 000 000 0000",address:"Address to be provided"},
+nav:{contact:"Contact Us"},
+hero:{title:"Strategy that moves business forward.",text:"Business planning, management consulting and strategic advisory for companies ready to adapt, grow and operate better.",primary:"Explore Our Expertise",secondary:"Reach Out to Professionals"},
+positioning:{title:"One strategic partner for complex business challenges.",text:"We help businesses understand challenges, define practical strategies and build the systems required for sustainable growth."},
+expertise:{title:"Our Areas of Expertise",text:"From strategic direction to operational execution, our consulting capabilities cover the key functions that drive a business forward."},
+why:{title:"Where Complexity Calls for Perspective",text:"The most consequential gaps are rarely obvious. They emerge where decisions, priorities and execution begin to pull in different directions — and where an outside perspective can bring them back into alignment."},
+approach:{title:"How we work",steps:[
+{name:"Understand",text:"We study the business, its market and the problem before proposing anything."},
+{name:"Define",text:"We turn findings into a clear strategy with priorities and trade-offs."},
+{name:"Build",text:"We design the plans, processes and structures that put the strategy to work."},
+{name:"Support",text:"We stay alongside your team as the plan is executed and refined."}]},
+cta:{title:"Have a business challenge to solve?",whatsapp:"Message us on WhatsApp",contact:"Contact details"},
+contactPage:{back:"Back to home",title:"Let's talk about your business.",text:"Message us on WhatsApp for the fastest response. Tell us briefly what you are working on.",button:"Open WhatsApp",labels:{email:"Email",phone:"Phone",address:"Office"}},
+categories:[
+{short:"Strategy",title:"Strategy & Management Consulting",summary:"Direction, structure and leadership alignment for organisations at a turning point.",services:[
+{name:"Corporate & Business Strategy",desc:"Long-term goals, new market entry, mergers and acquisitions, and business model change."},
+{name:"Management Consulting",desc:"Review of operations and structures to improve efficiency, resolve systemic issues and guide restructuring."},
+{name:"Change Management",desc:"Support through leadership shifts, digital transformation and cultural change."}]},
+{short:"Operations",title:"Operations & Process Consulting",summary:"Making the business run more efficiently, consistently and at scale.",services:[
+{name:"Supply Chain & Logistics",desc:"Procurement, warehousing, distribution networks and vendor management."},
+{name:"Process Improvement",desc:"Lean and Six Sigma methods to remove bottlenecks, cut cost and raise productivity."},
+{name:"Quality Assurance & Standards",desc:"Standard operating procedures and preparation for certifications such as ISO."}]},
+{short:"Finance",title:"Financial & Risk Advisory",summary:"Financial clarity for better decisions, and frameworks for managing uncertainty.",services:[
+{name:"Financial Planning & Budgeting",desc:"Cash flow, financial modelling, corporate restructuring and cost reduction."},
+{name:"Tax & Regulatory Compliance",desc:"Corporate tax frameworks, statutory audits, industry licensing and zoning rules."},
+{name:"Risk Management & Cybersecurity Audits",desc:"Operational, financial and digital risk review, with disaster recovery and fraud-prevention frameworks."}]},
+{short:"People",title:"HR & Talent Consulting",summary:"People structures and practices that support the strategy.",services:[
+{name:"Talent Acquisition & Executive Search",desc:"Recruitment pipelines and senior leadership hiring."},
+{name:"Compensation & Benefits",desc:"Salary benchmarking and structures, employee stock options and incentive programmes."},
+{name:"Training & Development",desc:"Skills programmes, leadership training and workplace culture workshops."}]},
+{short:"Marketing",title:"Marketing, Branding & Sales Consulting",summary:"Positioning and commercial systems that win and keep customers.",services:[
+{name:"Brand Strategy",desc:"Brand identity, positioning, messaging and perception guidelines."},
+{name:"Digital & Performance Marketing",desc:"Acquisition funnels, social media strategy, SEO and SEM, and paid media management."},
+{name:"Sales Operations",desc:"Sales pipelines, CRM adoption, pricing models and incentive structures."}]},
+{short:"Technology",title:"IT & Digital Consulting",summary:"Choosing, integrating and securing the systems a business runs on.",services:[
+{name:"Software Implementation & Architecture",desc:"ERP systems, cloud migration and custom software integration."},
+{name:"Data Analytics & Business Intelligence",desc:"Data pipelines, dashboards and predictive metrics for data-backed decisions."},
+{name:"IT Security & Infrastructure",desc:"Evaluation of hardware and software environments and cybersecurity protocols."}]},
+{short:"Specialised",title:"Niche & Specialised Consultancies",summary:"Focused expertise for situations that need a specific answer.",services:[
+{name:"Public Relations & Crisis Management",desc:"Public image, media relations and corporate communications during a crisis."},
+{name:"Legal Consulting",desc:"Counsel on corporate law, intellectual property and contractual obligations."},
+{name:"Sustainability & ESG Consulting",desc:"Environmental, social and governance standards, green energy transition and compliance."},
+{name:"Real Estate & Facility Consulting",desc:"Commercial leasing, property acquisition and zoning."}]}]};
+/* ===== RENDERING: no content below ===== */
+var C=CONFIG,$=function(s){return document.querySelector(s)};
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+document.title=C.brand.name;
+document.querySelectorAll("[data-k]").forEach(function(el){var v=el.dataset.k.split(".").reduce(function(o,k){return o&&o[k]},C);if(v!=null)el.textContent=v});
+var WA="https://wa.me/"+C.contact.whatsapp+"?text="+encodeURIComponent(C.contact.message);
+document.querySelectorAll(".wal").forEach(function(a){a.href=WA});
+var cb=$(".cb");cb.href="#contact";
+var acc=$("#acc");
+C.categories.forEach(function(d,i){var e=document.createElement("div");e.className="it";
+e.innerHTML='<button aria-expanded="false" aria-controls="p'+i+'"><span class="no">0'+(i+1)+'</span><span class="t">'+esc(d.title)+'</span><span class="pl"></span></button><div class="pn" id="p'+i+'"><div><p>'+esc(d.summary)+'</p><div class="sv">'+d.services.map(function(s){return"<div><b>"+esc(s.name)+"</b><span>"+esc(s.desc)+"</span></div>"}).join("")+'</div></div></div>';
+e.querySelector("button").onclick=function(){var o=e.classList.toggle("open");this.setAttribute("aria-expanded",o)};acc.appendChild(e)});
+var f=acc.firstChild;f.classList.add("open");f.querySelector("button").setAttribute("aria-expanded","true");
+$("#steps").innerHTML=C.approach.steps.map(function(s){return'<div class="st"><h3>'+esc(s.name)+"</h3><p>"+esc(s.text)+"</p></div>"}).join("");
+var n=C.categories.length,h='<g class="spin">',P=function(i){var a=-Math.PI/2+i*2*Math.PI/n;return[200+Math.cos(a)*145,200+Math.sin(a)*145]};
+C.categories.forEach(function(c,i){var p=P(i);h+='<line x1="200" y1="200" x2="'+p[0]+'" y2="'+p[1]+'"/>'});
+C.categories.forEach(function(c,i){var p=P(i);h+='<g class="nd"><circle class="n" cx="'+p[0]+'" cy="'+p[1]+'" r="36"/><text x="'+p[0]+'" y="'+(p[1]+4)+'">'+esc(c.short)+"</text></g>"});
+h+='</g><circle class="c" cx="200" cy="200" r="50"/><text class="ct" x="200" y="206">Business</text>';$(".hub").innerHTML=h;
+var L=C.contactPage.labels,K=C.contact;
+$("#cd").innerHTML='<a href="mailto:'+esc(K.email)+'"><span>'+L.email+"</span><span>"+esc(K.email)+'</span></a><div><span>'+L.phone+"</span><span>"+esc(K.phone)+"</span></div><div><span>"+L.address+"</span><span>"+esc(K.address)+"</span></div>";
+var intro=$("#intro");function end(){intro.classList.add("gone");document.body.classList.remove("lock");intro.setAttribute("aria-hidden","true")}
+$("#skip").onclick=end;setTimeout(end,7200);
+function route(){document.body.classList.toggle("cp",location.hash==="#contact");window.scrollTo(0,0)}
+var hero=$(".hero");if(window.IntersectionObserver)new IntersectionObserver(function(e){hero.classList.toggle("off",!e[0].isIntersecting)}).observe(hero);
+addEventListener("hashchange",route);route();
+document.querySelectorAll("[data-home]").forEach(function(a){a.onclick=function(e){e.preventDefault();history.replaceState(null,"",location.pathname);route()}});
+document.querySelectorAll("[data-go]").forEach(function(a){a.onclick=function(e){e.preventDefault();document.body.classList.remove("cp");$(a.getAttribute("href")).scrollIntoView({behavior:"smooth"})}});
+</script>
+</body></html>
