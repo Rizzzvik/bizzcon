@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>White Labels / Junction Experts — Admin</title>
+<link rel="stylesheet" href="../css/admin.css">
+</head><body>
+<header class="admin-head"><div><strong>JUNCTION GROUP</strong><span>Site Control</span></div>
+<nav><a href="../index.html">White Labels</a><a href="../business.html">Business Consultancy</a></nav></header>
+<main class="admin-wrap">
+<section class="hero-admin"><span>ADMIN CONTROL</span><h1>Manage both websites.</h1><p>Control contact details, WhatsApp actions, product categories, expansion state and product information from one dashboard.</p></section>
+
+<div class="tabs"><button class="tab active" data-tab="white">White Labels</button><button class="tab" data-tab="business">Business Consultancy</button><button class="tab" data-tab="products">Products</button></div>
+
+<section class="panel" id="white">
+<h2>White Labels contact</h2>
+<div class="form-grid">
+<label>Brand<input data-bind="whiteLabels.brand"></label><label>Tagline<input data-bind="whiteLabels.tagline"></label>
+<label>Email<input data-bind="whiteLabels.email"></label><label>Phone<input data-bind="whiteLabels.phone"></label>
+<label>WhatsApp number<input data-bind="whiteLabels.whatsapp" placeholder="919999999999"></label>
+<label>Contact heading<input data-bind="whiteLabels.contactHeading"></label>
+<label class="wide">Contact text<textarea data-bind="whiteLabels.contactText"></textarea></label>
+</div><button class="save" data-save="whiteLabels">Save White Labels</button>
+</section>
+
+<section class="panel hidden" id="business">
+<h2>Business Consultancy contact</h2>
+<div class="form-grid">
+<label>Brand<input data-bind="businessConsultancy.brand"></label>
+<label>Email<input data-bind="businessConsultancy.email"></label>
+<label>Phone<input data-bind="businessConsultancy.phone"></label>
+<label>WhatsApp number<input data-bind="businessConsultancy.whatsapp" placeholder="919999999999"></label>
+<label>Contact heading<input data-bind="businessConsultancy.contactHeading"></label>
+<label class="wide">Contact text<textarea data-bind="businessConsultancy.contactText"></textarea></label>
+</div><button class="save" data-save="businessConsultancy">Save Business Consultancy</button>
+</section>
+
+<section class="panel hidden" id="products">
+<div class="panel-title"><div><h2>Product categories</h2><p>Expand/collapse, rename categories, edit products and add new categories.</p></div><div><button class="add" id="addCategory">+ Add category</button> <button class="tab" id="resetData">Reset local changes</button></div></div>
+<div id="categoryEditor"></div>
+</section>
+
+<section class="panel">
+<h2>Deployment note</h2><p class="note">This dashboard is intentionally structured so a backend/API can replace the JSON/local data layer later. The public pages are already separated into HTML, CSS, JavaScript, photos and data.</p>
+</section>
+</main>
+<script src="../js/site-data.js"></script><script src="../js/admin.js"></script>
+</body></html>
